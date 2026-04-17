@@ -35,7 +35,7 @@ max_age: 604800
 |---|---|---|
 | `version` | STSv1 | Only supported version |
 | `mode` | enforce | Sending MTAs must validate TLS or reject delivery |
-| `mx` | nextlayersec-io.mail.protection.outlook.com | Must match live MX record exactly |
+| `mx` | nextlayersec-io.p-v1.mx.microsoft | Must match live MX record exactly |
 | `max_age` | 604800 | Policy cache TTL — 7 days |
 
 ---
@@ -46,7 +46,7 @@ max_age: 604800
 |---|---|---|---|
 | CNAME | `mta-sts` | `blackvectra.github.io` | DNS-only, no proxy |
 | TXT | `_mta-sts` | `v=STSv1; id=20260416` | Bump `id` on every policy change |
-| TXT | `_smtp._tls` | `v=TLSRPTv1; rua=mailto:tlsrpt@nextlayersec.io` | TLS failure reporting |
+| TXT | `_smtp._tls` | `v=TLSRPTv1; rua=mailto:email@nextlayersec.io` | TLS failure reporting |
 
 ---
 
